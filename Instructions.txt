@@ -1,10 +1,16 @@
 
-Corer o run.sh
+Run run.sh
 
-Mas primeiro correr no terminal Linux:
+But first you need to run in the terminal (Linux):
 xhost +
 
-NOTA: isto tem problemas de segurança, permite a todos aceder ao meu X Server (monitor etc.)
+To know which display number you got run "echo $DISPLAY". In the Docuker run change de Display flag to the number you got (usually I get 0 or 1)
 
-Depois de correr a app desligar este acesso geral (e permitir só aos users) com:
+Note: this is not safe to be always on, it allows everyone to access the X Server (Monitor, etc.)
+
+After running the app disable it again (allowing only autenticated users) by running:
 xhost -
+
+This Aps is a GUI, so it needs access to the screen. Docker was not built for that, this is a workaround, giving access to Docker.
+
+This Docker only workds with Linux.
